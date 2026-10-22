@@ -4,20 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aria Elder Care Center</title>
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Your styles (last, so they override Bootstrap) -->
     <link href="./assets/css/style.css" rel="stylesheet" />
   </head>
+
   <body>
+    <!-- ===== Navbar ===== -->
     <nav class="navbar navbar-expand-lg aria-navbar">
       <div class="container-fluid">
-        <a class="navbar-brand ms-5" href="#"
-          ><img src="./assets/images/Logo.png" height="40" alt="Logo" />AECC</a
-        >
+        <a class="navbar-brand d-flex align-items-center gap-2 ms-lg-5" href="#">
+          <img src="./assets/images/Logo.png" height="40" alt="Aria Elder Care Center logo" />
+          AECC
+        </a>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -29,54 +41,115 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav gap- ps-5 ps-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Our Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Testimonials</a>
-            </li>
-            <li class="nav-item ms-lg-auto">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav gap-lg-3 ps-3 ps-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#our-home">Our Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+            <li class="nav-item ms-lg-auto"><a class="nav-link" href="#contact">Contact Us</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="hero-container">
-      <div class="descriptions">
-        <span class="tagline">Compassionate Care. Brighter Days.</span>
-        <h1>A Safe and Loving Home for Your Loved Ones</h1>
-        <p>
-          We provide personalized care, a warm community, and a higher quality
-          of life for seniors.
-        </p>
-        <div class="hero-buttons">
-          <a href="#services" class="btn btn-primary"
-            >Explore Our Services &rarr;</a
-          >
-          <a href="#contact" class="btn btn-outline">Schedule a Tour</a>
+    <main>
+      <!-- ===== Hero ===== -->
+      <section class="hero-container">
+        <div class="descriptions">
+          <span class="tagline">Compassionate Care. Brighter Days.</span>
+          <h1>A Safe and Loving Home for Your Loved Ones</h1>
+          <p>
+            We provide personalized care, a warm community, and a higher quality
+            of life for seniors.
+          </p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary">Explore Our Services &rarr;</a>
+            <a href="#contact" class="btn btn-outline">Schedule a Tour</a>
+          </div>
+        </div>
+
+        <div class="picture">
+          <img
+            src="./assets/images/Krishna Asthami Aria.png"
+            alt="Seniors celebrating Krishna Janmashtami at Aria Elder Care Center"
+            class="img-fluid"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="aria-footer position-relative py-4">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Brand -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <a href="#" class="d-flex align-items-center gap-2 text-decoration-none">
+              <img src="./assets/images/Logo.png" height="50" alt="Aria Elder Care Center logo" />
+              <div>
+                <h5 class="mb-0">Aria Elder Care</h5>
+                <small>Compassionate Care. Brighter Days.</small>
+              </div>
+            </a>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <h6 class="fw-bold mb-3">Quick Links</h6>
+            <div class="row">
+              <ul class="col-6 list-unstyled mb-0">
+                <li class="mb-2"><a href="#">Home</a></li>
+                <li class="mb-2"><a href="#about">About</a></li>
+                <li class="mb-2"><a href="#services">Services</a></li>
+              </ul>
+              <ul class="col-6 list-unstyled mb-0">
+                <li class="mb-2"><a href="#our-home">Our Home</a></li>
+                <li class="mb-2"><a href="#testimonials">Testimonials</a></li>
+                <li class="mb-2"><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <h6 class="fw-bold mb-3">Contact Us</h6>
+            <div class="d-flex gap-2 mb-2">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>123 Care Home Lane<br />Your City, State 12345</span>
+            </div>
+            <div class="d-flex gap-2 mb-2">
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+11234567890">(123) 456-7890</a>
+            </div>
+            <div class="d-flex gap-2">
+              <i class="bi bi-envelope-fill"></i>
+              <a href="mailto:info@example.com">info@example.com</a>
+            </div>
+          </div>
+
+          <!-- Social -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <h6 class="fw-bold mb-3">Follow Us</h6>
+            <div class="d-flex gap-3 fs-4">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-2 border-top mt-4 pt-3 small">
+          <span>&copy; 2026 Aria Elder Care Center. All rights reserved.</span>
+          <span><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></span>
         </div>
       </div>
-      <div class="picture">
-        <img src="./assets/images/Krishna Asthami Aria.png" />
-      </div>
-    </div>
+    </footer>
 
+    <!-- Bootstrap JS (needed for the navbar toggle) -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
