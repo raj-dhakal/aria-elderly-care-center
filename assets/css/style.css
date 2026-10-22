@@ -1,4 +1,117 @@
-.aria-navbar {
-    background-color: #E1E9E4;
-    width: 100%;
+/* ===== Hero section ===== */
+.hero-container {
+  display: flex;
+  height: 450px;
+  background: #eef5ee;
+}
+
+/* ===== Left half: text ===== */
+.descriptions {
+  flex: 1;                       /* 50% */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;       /* vertical centering */
+  padding: 3rem 4rem;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.descriptions h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3rem;
+  line-height: 1.15;
+  color: #1f4d36;
+  margin: 0 0 1.25rem;
+}
+
+.descriptions p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 2rem;
+}
+
+/* ===== Buttons ===== */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;          /* pill shape */
+  font-weight: 600;
+  text-decoration: none;
+  border: 1.5px solid #1f4d36;
+}
+
+.btn-primary {
+  background: #1f4d36;
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #1f4d36;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* ===== Right half: picture (whole photo, no cropping) ===== */
+.picture {
+  flex: 1;                       /* 50% */
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eef5ee;
+}
+
+.picture img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* ===== Tablet: smaller heading ===== */
+@media (max-width: 1024px) {
+  .descriptions {
+    padding: 2rem 2.5rem;
+  }
+
+  .descriptions h1 {
+    font-size: 2.3rem;
+  }
+}
+
+/* ===== Mobile: stack text above picture ===== */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .descriptions {
+    padding: 2rem 1.5rem;
+  }
+
+  .descriptions h1 {
+    font-size: 2rem;
+  }
+
+  .picture {
+    flex: none;
+    height: 300px;
+  }
 }
