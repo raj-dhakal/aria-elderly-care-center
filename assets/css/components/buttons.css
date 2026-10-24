@@ -1,0 +1,43 @@
+/* ==========================================================================
+   BUTTONS — recolors Bootstrap buttons to the Aria green
+   ========================================================================== */
+
+.btn-primary {
+  --bs-btn-color: var(--white);
+  --bs-btn-bg: var(--green-dark);
+  --bs-btn-border-color: var(--green-dark);
+  --bs-btn-hover-color: var(--white);
+  --bs-btn-hover-bg: var(--green-darker);
+  --bs-btn-hover-border-color: var(--green-darker);
+  --bs-btn-active-color: var(--white);
+  --bs-btn-active-bg: var(--green-darkest);
+  --bs-btn-active-border-color: var(--green-darkest);
+}
+
+.btn-outline {
+  --bs-btn-color: var(--green-dark);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--green-dark);
+  --bs-btn-hover-color: var(--white);
+  --bs-btn-hover-bg: var(--green-dark);
+  --bs-btn-hover-border-color: var(--green-dark);
+  --bs-btn-active-color: var(--white);
+  --bs-btn-active-bg: var(--green-darker);
+  --bs-btn-active-border-color: var(--green-darker);
+}
+
+/* Rounded "pill" shape — add class="btn btn-primary btn-pill" */
+.btn-pill {
+  --bs-btn-padding-x: 1.8rem;
+  --bs-btn-padding-y: 0.8rem;
+  --bs-btn-font-weight: 600;
+  --bs-btn-border-radius: var(--radius-pill);
+  --bs-btn-border-width: 1.5px;
+  --bs-btn-focus-shadow-rgb: 31, 77, 54;
+}
+
+/* Smaller pill, used in the navbar */
+.btn-pill-sm {
+  --bs-btn-padding-x: 1.4rem;
+  --bs-btn-padding-y: 0.5rem;
+}

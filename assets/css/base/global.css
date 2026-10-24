@@ -1,0 +1,41 @@
+/* ==========================================================================
+   GLOBAL — page-wide defaults and shared text styles
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);   /* sticky navbar won't cover section titles */
+}
+
+body {
+  color: var(--text);
+}
+
+h1, h2, h3, h5 {
+  font-family: var(--serif);
+}
+
+/* Small uppercase label above section titles ("OUR SERVICES") */
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+/* Centered title block used at the top of most sections */
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.section-header h2 {
+  color: var(--green-dark);
+  font-size: 2.2rem;
+}
+
+.section-header p:not(.eyebrow) {
+  color: var(--text-muted);
+}

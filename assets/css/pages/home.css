@@ -1,0 +1,315 @@
+/* ==========================================================================
+   HOME PAGE — sections that only appear on index.html
+   Order follows the page: Hero → Services → About → Why Us →
+   Testimonials → Call to action
+   ========================================================================== */
+
+
+/* ===== 1. Hero ===== */
+.hero {
+  display: flex;
+  height: max(50vh, 380px);       /* half the screen, never shorter than 380px */
+  background: var(--green-bg);
+}
+
+/* Left half: text */
+.hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 4rem;
+}
+
+.hero-tagline {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 2.6rem;
+  line-height: 1.15;
+  color: var(--green-dark);
+  margin: 0 0 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Right half: picture (whole photo, no cropping) */
+.hero-picture {
+  flex: 1;
+  min-width: 0;
+  position: relative;             /* lets the values card float on top */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.hero-picture img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Floating "Compassion / Respect / Dignity / Always" card */
+.values-card {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+.values-card .icon-circle {
+  margin: 0 0 0.75rem;
+}
+
+.values-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.values-card li:first-child {
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+
+/* ===== 2. Services ===== */
+.services {
+  padding: 4rem 1.5rem;
+  background: var(--cream);
+}
+
+
+/* ===== 3. About ===== */
+.about {
+  display: flex;
+  align-items: stretch;
+  background: var(--cream);
+}
+
+.about-image {
+  flex: 1;
+  min-height: 380px;
+  position: relative;             /* the photo fills this box... */
+}
+
+.about-image img {
+  position: absolute;             /* ...without making the section taller */
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;        /* stops the button stretching full width */
+  padding: 3rem 4rem;
+}
+
+.about-content h2 {
+  font-size: 2.2rem;
+  color: var(--green-dark);
+  margin-bottom: 1rem;
+}
+
+.about-content > p:not(.eyebrow) {
+  color: #444;
+  line-height: 1.7;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.5rem;
+}
+
+.about-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+
+/* ===== 4. Why Choose Us ===== */
+.why-us {
+  padding: 4rem 1.5rem;
+  background: var(--green-bg);
+}
+
+.why-us .section-header {
+  margin-bottom: 2rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.why-item {
+  text-align: center;
+}
+
+.why-item p {
+  font-weight: 500;
+  color: var(--green-dark);
+  margin: 0;
+}
+
+
+/* ===== 5. Testimonials ===== */
+.testimonials {
+  padding: 4rem 1.5rem 3rem;
+  background: var(--white);
+}
+
+.testimonials .section-header {
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-carousel {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 4rem 2.5rem;         /* side room for arrows, bottom room for dots */
+}
+
+/* Arrows: green chevrons instead of Bootstrap's white ones */
+.testimonial-carousel .carousel-control-prev,
+.testimonial-carousel .carousel-control-next {
+  width: 3rem;
+  bottom: 2.5rem;                 /* level with the card, not the dots */
+  color: var(--green-dark);
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.testimonial-carousel .carousel-control-prev:hover,
+.testimonial-carousel .carousel-control-next:hover {
+  color: var(--green-dark);
+  opacity: 1;
+}
+
+/* Dots */
+.testimonial-carousel .carousel-indicators {
+  margin-bottom: 0;
+}
+
+.testimonial-carousel .carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 0;
+  background-color: var(--green-dark);
+}
+
+
+/* ===== 6. Call to action: Schedule a Tour ===== */
+.cta {
+  position: relative;
+  overflow: hidden;
+  background: var(--green-dark);
+  color: var(--white);
+  padding: 2.5rem 1.5rem;
+}
+
+.cta-leaf {
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(-20deg);
+  font-size: 9rem;
+  color: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.cta-inner {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.cta p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.cta .btn {
+  color: var(--green-dark);
+}
+
+
+/* ===== Responsive: tablet ===== */
+@media (max-width: 1024px) {
+  .hero-text { padding: 2rem 2.5rem; }
+  .hero-text h1 { font-size: 2.1rem; }
+  .values-card { right: 1rem; }
+
+  .about-content { padding: 2.5rem; }
+}
+
+/* ===== Responsive: phone ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+  .hero-text { padding: 2rem 1.5rem; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-picture {
+    flex: none;
+    height: 300px;
+  }
+  .values-card { display: none; }   /* too cramped on phones */
+
+  .about { flex-direction: column; }
+  .about-image { min-height: 250px; }
+  .about-content { padding: 2rem 1.5rem; }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonial-carousel { padding: 0 2.5rem 2.5rem; }
+}

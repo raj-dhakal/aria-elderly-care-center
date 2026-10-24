@@ -1,0 +1,43 @@
+/* ==========================================================================
+   FOOTER — bottom of every page
+   ========================================================================== */
+
+.site-footer {
+  background: var(--footer-bg);
+  color: var(--text);
+  border-top: 1px solid var(--line);
+  overflow: hidden;               /* clips the decorative leaf */
+}
+
+.site-footer h5,
+.site-footer h6 {
+  color: var(--green-dark);
+}
+
+.site-footer small {
+  color: var(--text-muted);
+}
+
+.site-footer a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--green-dark);
+  text-decoration: underline;
+}
+
+.site-footer .bi {
+  color: var(--green-dark);
+}
+
+/* Faint decorative leaf, bottom-right */
+.site-footer .footer-leaf {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 6rem;
+  color: rgba(31, 77, 54, 0.12);
+  pointer-events: none;
+}

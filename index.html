@@ -3,86 +3,310 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aria Elder Care Center</title>
+    <title>Aria Elder Care Center | Compassionate Senior Care in Redmond, WA</title>
+    <meta
+      name="description"
+      content="Aria Elder Care Center offers personalized senior care, companionship, and homemade meals in a safe, family-like home in Redmond, WA."
+    />
+    <link rel="icon" type="image/png" href="./assets/images/Logo.png" />
 
-    <!-- Bootstrap CSS -->
+    <!-- ===== Libraries ===== -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <!-- Bootstrap Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
-    <!-- Your styles (last, so they override Bootstrap) -->
-    <link href="./assets/css/style.css" rel="stylesheet" />
+
+    <!-- ===== Site styles (order matters: general → specific) ===== -->
+    <!-- 1. Base: variables + global defaults (every page) -->
+    <link href="./assets/css/base/variables.css" rel="stylesheet" />
+    <link href="./assets/css/base/global.css" rel="stylesheet" />
+    <!-- 2. Components: reusable pieces (every page) -->
+    <link href="./assets/css/components/buttons.css" rel="stylesheet" />
+    <link href="./assets/css/components/cards.css" rel="stylesheet" />
+    <!-- 3. Layout: header + footer (every page) -->
+    <link href="./assets/css/layout/header.css" rel="stylesheet" />
+    <link href="./assets/css/layout/footer.css" rel="stylesheet" />
+    <!-- 4. Page: only this page's sections -->
+    <link href="./assets/css/pages/home.css" rel="stylesheet" />
   </head>
 
   <body>
-    <!-- ===== Navbar ===== -->
-    <nav class="navbar navbar-expand-lg aria-navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center gap-2 ms-lg-5" href="#">
-          <img src="./assets/images/Logo.png" height="40" alt="Aria Elder Care Center logo" />
-          AECC
-        </a>
+    <!-- ================================================== Header / Navbar ================================================== -->
+    <header class="site-header sticky-top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-lg-5">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img
+              src="./assets/images/Logo.png"
+              height="44"
+              alt="Aria Elder Care Center logo"
+            />
+            <span class="brand-text">
+              Aria Elder Care
+              <small>Compassionate Care. Brighter Days.</small>
+            </span>
+          </a>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul class="navbar-nav gap-lg-3 ps-3 ps-lg-0">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#our-home">Our Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-            <li class="nav-item ms-lg-auto"><a class="nav-link" href="#contact">Contact Us</a></li>
-          </ul>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- mx-lg-auto centers the links between the logo and the button -->
+            <ul class="navbar-nav mx-lg-auto gap-lg-3 ps-3 ps-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#our-home">Our Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+
+            <a
+              href="tel:+17633989244"
+              class="btn btn-primary btn-pill btn-pill-sm ms-3 ms-lg-0 my-2 my-lg-0"
+            >
+              <i class="bi bi-telephone-fill me-2"></i>Call Us
+            </a>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <main>
-      <!-- ===== Hero ===== -->
-      <section class="hero-container">
-        <div class="descriptions">
-          <span class="tagline">Compassionate Care. Brighter Days.</span>
+      <!-- ================================================== 1. Hero ================================================== -->
+      <section class="hero">
+        <div class="hero-text">
+          <span class="hero-tagline">Compassionate Care. Brighter Days.</span>
           <h1>A Safe and Loving Home for Your Loved Ones</h1>
           <p>
             We provide personalized care, a warm community, and a higher quality
             of life for seniors.
           </p>
           <div class="hero-buttons">
-            <a href="#services" class="btn btn-primary">Explore Our Services &rarr;</a>
-            <a href="#contact" class="btn btn-outline">Schedule a Tour</a>
+            <a href="#services" class="btn btn-primary btn-pill">Explore Our Services &rarr;</a>
+            <a href="#schedule" class="btn btn-outline btn-pill">Schedule a Tour</a>
           </div>
         </div>
 
-        <div class="picture">
+        <div class="hero-picture">
           <img
             src="./assets/images/Krishna Asthami Aria.png"
             alt="Seniors celebrating Krishna Janmashtami at Aria Elder Care Center"
-            class="img-fluid"
           />
+
+          <!-- Floating values card (hidden on small phones) -->
+          <div class="values-card">
+            <div class="icon-circle sm"><i class="bi bi-heart"></i></div>
+            <ul>
+              <li>Compassion</li>
+              <li>Respect</li>
+              <li>Dignity</li>
+              <li>Always</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================== 2. Services ================================================== -->
+      <section id="services" class="services">
+        <div class="section-header">
+          <p class="eyebrow">Our Services</p>
+          <h2>Quality Care for a Better Tomorrow</h2>
+          <p>We offer a range of personalized services to meet the unique needs of each resident.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="service-card">
+            <div class="icon-circle"><i class="bi bi-heart"></i></div>
+            <h3>Personal Care</h3>
+            <p>Assistance with daily living activities in a respectful and caring environment.</p>
+            <img src="./assets/images/personal-care.jpg" alt="Caregiver helping a resident" />
+          </article>
+
+          <article class="service-card">
+            <div class="icon-circle"><i class="bi bi-people"></i></div>
+            <h3>Companionship</h3>
+            <p>Meaningful engagement and social activities to promote well-being.</p>
+            <img src="./assets/images/companionship.jpg" alt="Residents playing cards together" />
+          </article>
+
+          <article class="service-card">
+            <div class="icon-circle"><i class="bi bi-shield-check"></i></div>
+            <h3>Health &amp; Safety</h3>
+            <p>A secure home with continuous support and peace of mind.</p>
+            <img src="./assets/images/health-safety.jpg" alt="Caregiver holding a resident's hands" />
+          </article>
+
+          <article class="service-card">
+            <div class="icon-circle"><i class="bi bi-house"></i></div>
+            <h3>Homemade Meals</h3>
+            <p>Nutritious and delicious meals prepared with care for a healthy lifestyle.</p>
+            <img src="./assets/images/homemade-meals.jpg" alt="Plate of salmon with fresh vegetables" />
+          </article>
+        </div>
+      </section>
+
+      <!-- ================================================== 3. About ================================================== -->
+      <section id="about" class="about">
+        <div class="about-image" id="our-home">
+          <img src="./assets/images/Krishna Asthami Aria.png" alt="Bright, cozy living room at Aria Elder Care Center" />
+        </div>
+
+        <div class="about-content">
+          <p class="eyebrow">About Us</p>
+          <h2>A Place to Call Home</h2>
+          <p>
+            Our senior care home is built on the values of compassion, respect, and dignity.
+            We provide a warm, family-like environment where residents feel safe, valued,
+            and supported every day.
+          </p>
+
+          <div class="about-features">
+            <div class="feature">
+              <div class="icon-circle sm"><i class="bi bi-heart"></i></div>
+              <span>Compassionate<br />Staff</span>
+            </div>
+            <div class="feature">
+              <div class="icon-circle sm"><i class="bi bi-people"></i></div>
+              <span>Small, Family<br />Environment</span>
+            </div>
+            <div class="feature">
+              <div class="icon-circle sm"><i class="bi bi-flower1"></i></div>
+              <span>Personalized<br />Care Plans</span>
+            </div>
+          </div>
+
+          <a href="#schedule" class="btn btn-primary btn-pill btn-pill-sm">Learn More About Us &rarr;</a>
+        </div>
+      </section>
+
+      <!-- ================================================== 4. Why Choose Us ================================================== -->
+      <section class="why-us">
+        <div class="section-header">
+          <p class="eyebrow">Why Choose Us</p>
+          <h2>More Than Just Care</h2>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-item">
+            <div class="icon-circle white"><i class="bi bi-people"></i></div>
+            <p>Experienced<br />and Caring Team</p>
+          </div>
+          <div class="why-item">
+            <div class="icon-circle white"><i class="bi bi-house-heart"></i></div>
+            <p>Safe and Comfortable<br />Living Environment</p>
+          </div>
+          <div class="why-item">
+            <div class="icon-circle white"><i class="bi bi-heart"></i></div>
+            <p>Engaging Activities<br />and Social Opportunities</p>
+          </div>
+          <div class="why-item">
+            <div class="icon-circle white"><i class="bi bi-flower1"></i></div>
+            <p>Personalized Attention<br />for Every Resident</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================== 5. Testimonials ================================================== -->
+      <!-- TODO: replace these placeholder quotes with real ones from families (with their permission) -->
+      <section id="testimonials" class="testimonials">
+        <div class="section-header">
+          <p class="eyebrow">Testimonials</p>
+          <h2>What Families Say</h2>
+        </div>
+
+        <div
+          id="testimonialCarousel"
+          class="carousel slide testimonial-carousel"
+          data-bs-ride="carousel"
+          data-bs-interval="7000"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <blockquote class="quote-card">
+                <i class="bi bi-quote quote-mark"></i>
+                <p>"The care and kindness my mother receives here is incredible. We have peace of mind knowing she is happy, safe, and well cared for."</p>
+                <footer>&mdash; Family Member</footer>
+              </blockquote>
+            </div>
+            <div class="carousel-item">
+              <blockquote class="quote-card">
+                <i class="bi bi-quote quote-mark"></i>
+                <p>"The staff treat my father like family. He looks forward to the activities every single day."</p>
+                <footer>&mdash; Family Member</footer>
+              </blockquote>
+            </div>
+            <div class="carousel-item">
+              <blockquote class="quote-card">
+                <i class="bi bi-quote quote-mark"></i>
+                <p>"The home is clean, bright and welcoming, and the meals are wonderful. It truly feels like home."</p>
+                <footer>&mdash; Family Member</footer>
+              </blockquote>
+            </div>
+            <div class="carousel-item">
+              <blockquote class="quote-card">
+                <i class="bi bi-quote quote-mark"></i>
+                <p>"They always keep us informed and listen to our concerns. We couldn't ask for better care."</p>
+                <footer>&mdash; Family Member</footer>
+              </blockquote>
+            </div>
+          </div>
+
+          <!-- Arrows -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <i class="bi bi-chevron-left" aria-hidden="true"></i>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+          <!-- Dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Testimonial 1"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Testimonial 2"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Testimonial 3"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3" aria-label="Testimonial 4"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================== 6. Call to action ================================================== -->
+      <section id="schedule" class="cta">
+        <i class="bi bi-flower3 cta-leaf" aria-hidden="true"></i>
+        <div class="cta-inner">
+          <div>
+            <h2>Schedule a Tour Today</h2>
+            <p>Come see our home, meet our staff, and learn how we can support your loved one.</p>
+          </div>
+          <a href="tel:+17633989244" class="btn btn-light btn-pill">
+            <i class="bi bi-calendar-check me-2"></i>Schedule a Tour
+          </a>
         </div>
       </section>
     </main>
 
-    <!-- ===== Footer ===== -->
-    <footer class="aria-footer position-relative py-4">
+    <!-- ================================================== Footer ================================================== -->
+    <footer id="contact" class="site-footer position-relative py-4">
+      <i class="bi bi-feather footer-leaf" aria-hidden="true"></i>
       <div class="container">
         <div class="row gy-4">
           <!-- Brand -->
@@ -122,11 +346,11 @@
             </div>
             <div class="d-flex gap-2 mb-2">
               <i class="bi bi-telephone-fill"></i>
-              <a href="tel:+11234567890">(763) 3989244</a>
+              <a href="tel:+17633989244">(763) 398-9244</a>
             </div>
             <div class="d-flex gap-2">
               <i class="bi bi-envelope-fill"></i>
-              <a href="mailto:info@example.com">AECC@gmail.com</a>
+              <a href="mailto:AECC@gmail.com">AECC@gmail.com</a>
             </div>
           </div>
 
@@ -149,7 +373,8 @@
       </div>
     </footer>
 
-    <!-- Bootstrap JS (needed for the navbar toggle) -->
+    <!-- ===== Scripts ===== -->
+    <!-- Bootstrap JS (navbar toggle + testimonial carousel) -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

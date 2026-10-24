@@ -1,0 +1,38 @@
+/* ==========================================================================
+   HEADER — top navigation bar (same on every page)
+   ========================================================================== */
+
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .navbar-brand {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+/* Name with the tagline underneath */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-text small {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.site-header .nav-link {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link.active {
+  color: var(--green-dark);
+}
